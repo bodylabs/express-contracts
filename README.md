@@ -1,11 +1,15 @@
-# express-rho-contracts
+express-contracts
+=================
+
 Express.js plugin for checking request and response with rho-contracts
 
-Example usage (adapted from `middleware.spec.js`):
+
+Usage
+-----
 
 ```js
 var c = require('rho-contracts'),
-    erc = require('express-rho-contracts');
+    erc = require('express-contracts');
 
 var cc = {};
 
@@ -62,15 +66,15 @@ Installation
 ------------
 
 ```console
-npm install rho-contracts express-rho-contracts
+npm install rho-contracts express-contracts
 ```
 
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/bodylabs/express-rho-contracts/issues
-- Source Code: github.com/bodylabs/express-rho-contracts
+- Issue Tracker: github.com/bodylabs/express-contracts/issues
+- Source Code: github.com/bodylabs/express-contracts
 
 Pull requests welcome!
 
