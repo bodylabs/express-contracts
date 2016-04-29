@@ -3,7 +3,7 @@ Express.js plugin for checking request and response with rho-contracts
 
 Example usage (adapted from `middleware.spec.js`):
 
-```
+```js
 var c = require('rho-contracts'),
     erc = require('express-rho-contracts');
 
