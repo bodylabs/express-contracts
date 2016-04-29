@@ -56,3 +56,32 @@ Finally, there is an asymmetry between the `requestContract`, which is run over
 the whole request, and the `responseBodyContract`, which is only run over the
 payload which eventually becomes the `res.body`. The motivation for checking
 the whole request is to have the ability to check query strings.
+
+
+Installation
+------------
+
+```console
+npm install express-rho-contracts
+```
+
+
+Contribute
+----------
+
+- Issue Tracker: github.com/bodylabs/express-rho-contracts/issues
+- Source Code: github.com/bodylabs/express-rho-contracts
+
+Pull requests welcome!
+
+
+Support
+-------
+
+If you are having issues, please let us know.
+
+
+License
+-------
+
+The project is licensed under the two-clause BSD license.
