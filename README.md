@@ -62,7 +62,7 @@ Installation
 ------------
 
 ```console
-npm install express-rho-contracts
+npm install rho-contracts express-rho-contracts
 ```
 
 
