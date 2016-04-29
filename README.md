@@ -53,9 +53,9 @@ Furthermore, note that the middleware works by extending `res` with a method
 thus it is easy to "jump out" of the contract e.g. to send an error.
 
 Finally, there is an asymmetry between the `requestContract`, which is run over
-the whole request, and the `responseBodyContract`, which is only run over the
-payload which eventually becomes the `res.body`. The motivation for checking
-the whole request is to have the ability to check query strings.
+the whole request (but only `body` and `query` actually checked), and the
+`responseBodyContract`, which is only run over the payload that eventually
+becomes the `res.body`.
 
 
 Installation
