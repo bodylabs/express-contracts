@@ -9,7 +9,7 @@ Usage
 
 ```js
 var c = require('rho-contracts'),
-    erc = require('express-contracts');
+    ec = require('express-contracts');
 
 var cc = {};
 
@@ -29,7 +29,7 @@ var exampleApplicationMiddleware = function (req, res, next) {
 
 var exampleErrorHandlingMiddleware = function (err, req, res, next) {
     if (err) {
-        if (err instanceof erc.ValidationError) {
+        if (err instanceof ec.ValidationError) {
             res.status(400).json({ error: err.message });
         } else if (err instanceof c.ContractError) {
             res.status(500).json({ error: 'Internal Contract Violation' });
@@ -41,7 +41,7 @@ var exampleErrorHandlingMiddleware = function (err, req, res, next) {
 
 app.use(
    require('body-parser').json(), // populates req.body
-   erc.useContracts(cc.request, cc.responseBody),
+   ec.useContracts(cc.request, cc.responseBody),
    exampleApplicationMiddleware,
    exampleErrorHandlingMiddleware
 );
