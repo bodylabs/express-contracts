@@ -16,8 +16,8 @@
     "url": "git@github.com:bodylabs/express-rho-contracts.git"
   },
   "engines": {
-    "node": "0.12.0",
-    "npm": "3.1.x"
+    "node": "5.8.0",
+    "npm": "3.5.x"
   },
   "dependencies": {
     "underscore": "~1.8.3"
