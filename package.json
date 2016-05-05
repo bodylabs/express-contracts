@@ -1,6 +1,6 @@
 {
-  "name": "express-rho-contracts",
-  "version": "1.0.0",
+  "name": "express-contracts",
+  "version": "1.1.0",
   "description": "Express.js plugin for checking request and response with rho-contracts",
   "license": "BSD-2-Clause",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bodylabs/express-rho-contracts.git"
+    "url": "git@github.com:bodylabs/express-contracts.git"
   },
   "engines": {
     "node": "5.8.0",
@@ -23,7 +23,7 @@
     "underscore": "~1.8.3"
   },
   "peerDependencies": {
-    "rho-contracts": ">=1.0.0"
+    "rho-contracts": ">=1.2.0"
   },
   "devDependencies": {
     "body-parser": "~1.9.3",
@@ -32,7 +32,7 @@
     "express": "~4.10.3",
     "jscs": "^2.8.0",
     "mocha": "^2.3.4",
-    "rho-contracts": "git+https://github.com/bodylabs/rho-contracts.js.git#1.0.0",
+    "rho-contracts": "git+https://github.com/bodylabs/rho-contracts.js.git#1.2.0",
     "should": "^8.3.1",
     "supertest": "~0.15.0"
   }
