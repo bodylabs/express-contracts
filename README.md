@@ -15,7 +15,7 @@ You must use the Body Labs package, `rho-contracts-fork`:
 ```
 
 ```js
-var c = require('rho-contracts'),
+var c = require('rho-contracts-fork'),
     ec = require('express-contracts');
 
 var cc = {};
