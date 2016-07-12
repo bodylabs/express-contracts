@@ -7,6 +7,13 @@ Express.js plugin for checking request and response with rho-contracts
 Usage
 -----
 
+You must use the Body Labs package, `rho-contracts-fork`:
+```js
+  "dependencies": {
+    "rho-contracts-fork": "^1.3.0"
+  }
+```
+
 ```js
 var c = require('rho-contracts'),
     ec = require('express-contracts');
@@ -66,7 +73,7 @@ Installation
 ------------
 
 ```console
-npm install rho-contracts express-contracts
+npm install rho-contracts-fork express-contracts
 ```
 
 
