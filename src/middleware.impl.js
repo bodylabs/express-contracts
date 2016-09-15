@@ -15,9 +15,14 @@ var contracts = require('./contracts'),
 //
 var useContracts = function (requestContract, responseBodyContract) {
     return function (req, res, next) {
-        // Error handler may want to use checkedJson even in case of ValidationError, so extend first.
+        // Validation functions throw synchronous errors, which will be caught
+        // by Express and propagated to downstream middleware.
+
+        // Error handler may want to use checkedJson even in case of
+        // ValidationError, so extend first.
         extendWithCheckedJson(res, responseBodyContract);
-        validateRequest(req, requestContract, next);
+        validateRequest(req, requestContract);
+        next();
     };
 };
 
@@ -27,8 +32,6 @@ var useContractsOrError = function (requestContract, responseBodyContract) {
 
 var extendWithCheckedJson = function (res, responseBodyContract) {
     res.checkedJson = function (payload) {
-        // Throws a synchronous error which will be caught by Express and
-        // propagated to downstream middleware.
         responseBodyContract.check(payload);
         res.json(payload);
     };
@@ -53,9 +56,8 @@ var validateRequest = function (req, requestContract, next) {
         }
     } catch (e) {
         var prefix = 'Validation error in ' + relevantKeyDescriptions[key] + ':\n';
-        return next(new errors.ValidationError(prefix + e.message, key));
+        throw new errors.ValidationError(prefix + e.message, key);
     }
-    next();
 };
 
 var createCheckedErrorHandler = function (context) {
